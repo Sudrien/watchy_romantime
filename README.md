@@ -8,7 +8,7 @@ Tools >> Manage Libraries >> Add "Sunset" (tested with 1.1.7)
 
 There are 3 modes, which can be switched between by the right buttons;
 
-Mode 1, suggested by @maya@occult.institute
+Mode 1, suggested by [@maya@occult.institute](https://occult.institute/@maya)
 
 
 
@@ -28,7 +28,7 @@ Mode 3, When you don't want to forsake modernity as much
 
 
 
-Based on https://romanti.me/ by @wilbr@glitch.social
+Based on https://romanti.me/ by [@wilbr@glitch.social](https://glitch.social/@wilbr)
 
 https://en.wikipedia.org/wiki/Roman_timekeeping
 
