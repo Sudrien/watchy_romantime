@@ -21,7 +21,7 @@ Mode 2,
 ![](watchy_romantime_day_mode12.jpg) 
 ![](watchy_romantime_night_mode2.jpg)
 
-Mode 3, When you don't want to forsake modernity as much
+Mode 3, When you don't want to forsake modernity as much. I mean, they don't have zero, but.
 
 ![](watchy_romantime_day_mode3.jpg) 
 ![](watchy_romantime_night_mode3.jpg)
