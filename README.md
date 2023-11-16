@@ -8,7 +8,7 @@ Tools >> Manage Libraries >> Add "Sunset" (tested with 1.1.7)
 
 There are 3 modes, which can be switched between by the right buttons;
 
-Mode 1, suggested by [@maya@occult.institute](https://occult.institute/@maya) - Sun is down, you only have the moon[phase]
+Mode 1, suggested by [@maya@occult.institute](https://occult.institute/@maya) - Sun is down, you only have the moon...phase
 
 
 
