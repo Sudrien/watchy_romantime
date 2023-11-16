@@ -28,7 +28,7 @@ Mode 3, When you don't want to forsake modernity as much
 
 
 
-Based on https://romanti.me/ by @wilbr@glitch.social (with permission?)
+Based on https://romanti.me/ by @wilbr@glitch.social
 
 https://en.wikipedia.org/wiki/Roman_timekeeping
 
