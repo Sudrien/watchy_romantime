@@ -8,7 +8,7 @@ Tools >> Manage Libraries >> Add "Sunset" (tested with 1.1.7)
 
 There are 3 modes, which can be switched between by the right buttons; (TO FIX)
 
-Mode 1, suggested by [@maya@occult.institute](https://occult.institute/@maya)
+Mode 1, suggested by [@maya@occult.institute](https://occult.institute/@maya) - Sun is down, you only have the moon...phase
 
 
 
@@ -21,7 +21,7 @@ Mode 2,
 ![](watchy_romantime_day_mode12.jpg) 
 ![](watchy_romantime_night_mode2.jpg)
 
-Mode 3, When you don't want to forsake modernity as much
+Mode 3, When you don't want to forsake modernity as much. I mean, they don't have zero, but.
 
 ![](watchy_romantime_day_mode3.jpg) 
 ![](watchy_romantime_night_mode3.jpg)
