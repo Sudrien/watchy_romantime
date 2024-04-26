@@ -2,11 +2,11 @@
 
 This is another temporal hours clock - the romans had 12 between Sunrise and Sunset, and 12 between Sunset and Sunrise.
 
-Please compile with my fork https://github.com/Sudrien/Watchy unless sqfmi/Watchy#233 is merged.
+Tested with Watchy 1.4.10
 
 Tools >> Manage Libraries >> Add "Sunset" (tested with 1.1.7)
 
-There are 3 modes, which can be switched between by the right buttons;
+There are 3 modes, which can be switched between by the right buttons; (TO FIX)
 
 Mode 1, suggested by [@maya@occult.institute](https://occult.institute/@maya)
 
