@@ -24,8 +24,6 @@ void WatchyRomantime::drawWatchFace() {
 
 
 void WatchyRomantime::drawWatchFaceModeMoon(){
-
-  Serial.println("drawWatchFaceModeMoon");
   int16_t  x_center, y_center;
   uint16_t w_center, h_center;
 
@@ -46,7 +44,6 @@ void WatchyRomantime::drawWatchFaceModeMoon(){
   }
 
 void WatchyRomantime::drawWatchFaceModeNight(){
-  Serial.println("drawWatchFaceModeNight");
   display.fillScreen(fillColor);
   display.fillRect(0, 0, 200, 10, detailColor);
   
@@ -158,7 +155,6 @@ void WatchyRomantime::drawWatchFaceModeNight(){
 
 
 void WatchyRomantime::drawWatchFaceModeModern(){
-  Serial.println("drawWatchFaceModeModern");
   int16_t  x_center, y_center;
   uint16_t w_center, h_center;
 
@@ -175,13 +171,8 @@ void WatchyRomantime::drawWatchFaceModeModern(){
   integerToRoman(currentTime.Hour == 0 ? 24 : currentTime.Hour, h);
   integerToRoman(currentTime.Minute == 0 ? 60 : currentTime.Minute, m);
 
-
   sprintf(time_buffer, "%s:%s\0", h, m);
 
-
-Serial.println(h);
-Serial.println(m);
-Serial.println(time_buffer);
 
   display.getTextBounds(time_buffer, 0, 100, &x_center, &y_center, &w_center, &h_center);
   display.setCursor(100 - w_center / 2, 100 - h_center / 2);
@@ -191,11 +182,10 @@ Serial.println(time_buffer);
 
 
 
-  void WatchyRomantime::drawWatchFaceDecider(){
+void WatchyRomantime::drawWatchFaceDecider(){
+  int mode = 1;
   if(minutesBeforeSunset > minutesDaytime) {
     hourAngle =  180.0 * (minutesBeforeSunset - minutesDaytime) / minutesNighttime;
-    //Serial.print("before sunrise ");
-    fillColor = GxEPD_BLACK;
     detailColor = GxEPD_WHITE;
     switch(mode) {
       case 1:
@@ -210,7 +200,6 @@ Serial.println(time_buffer);
     }
   else if(minutesBeforeSunset > 0 ) {
     hourAngle = 180.0 * minutesBeforeSunset / minutesDaytime;
-    //Serial.print("daytime ");
     switch(mode) {
       case 1:
         drawWatchFaceModeNight();
@@ -224,7 +213,6 @@ Serial.println(time_buffer);
     }
   else {
     hourAngle = 180 + 180.0 * minutesBeforeSunset / minutesNighttime;
-    //Serial.print("after sunset ");
     fillColor = GxEPD_BLACK;
     detailColor = GxEPD_WHITE;
     switch(mode) {
@@ -266,6 +254,7 @@ void WatchyRomantime::integerToRoman(int num, char *result) {
  * If Up or down are pressed, change the mode
  */
 void WatchyRomantime::handleButtonPress() {
+  int mode = 1;
   if (guiState == WATCHFACE_STATE) {
     uint64_t wakeupBit = esp_sleep_get_ext1_wakeup_status();
 

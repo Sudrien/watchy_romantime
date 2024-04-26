@@ -11,7 +11,7 @@
 #define DEG2RAD 0.0174532925
 
 
-extern RTC_DATA_ATTR int mode;
+//extern RTC_DATA_ATTR int mode;
 
 class WatchyRomantime : public Watchy{
     using Watchy::Watchy;

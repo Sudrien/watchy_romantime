@@ -9,8 +9,6 @@
 WatchyRomantime watchy(settings);
 
 void setup(){
-  Serial.begin(115200);
-  Serial.println("gimme text");
   watchy.init();
 }
 
