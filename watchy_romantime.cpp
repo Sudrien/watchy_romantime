@@ -1,5 +1,7 @@
 #include "watchy_romantime.h"
 
+RTC_DATA_ATTR int showState = 0;
+
 void WatchyRomantime::drawWatchFace() {
 
   sun.setPosition(settings.lat.toFloat(), settings.lon.toFloat(), settings.gmtOffset / 3600);
@@ -183,11 +185,10 @@ void WatchyRomantime::drawWatchFaceModeModern(){
 
 
 void WatchyRomantime::drawWatchFaceDecider(){
-  int mode = 1;
   if(minutesBeforeSunset > minutesDaytime) {
     hourAngle =  180.0 * (minutesBeforeSunset - minutesDaytime) / minutesNighttime;
     detailColor = GxEPD_WHITE;
-    switch(mode) {
+    switch(showState) {
       case 1:
         drawWatchFaceModeNight();
         break;
@@ -200,7 +201,7 @@ void WatchyRomantime::drawWatchFaceDecider(){
     }
   else if(minutesBeforeSunset > 0 ) {
     hourAngle = 180.0 * minutesBeforeSunset / minutesDaytime;
-    switch(mode) {
+    switch(showState) {
       case 1:
         drawWatchFaceModeNight();
         break;
@@ -215,7 +216,7 @@ void WatchyRomantime::drawWatchFaceDecider(){
     hourAngle = 180 + 180.0 * minutesBeforeSunset / minutesNighttime;
     fillColor = GxEPD_BLACK;
     detailColor = GxEPD_WHITE;
-    switch(mode) {
+    switch(showState) {
       case 1:
         drawWatchFaceModeNight();
         break;
@@ -254,20 +255,19 @@ void WatchyRomantime::integerToRoman(int num, char *result) {
  * If Up or down are pressed, change the mode
  */
 void WatchyRomantime::handleButtonPress() {
-  int mode = 1;
   if (guiState == WATCHFACE_STATE) {
     uint64_t wakeupBit = esp_sleep_get_ext1_wakeup_status();
 
     if (wakeupBit & UP_BTN_MASK) {
-      mode--;
-      if(mode == -1) mode = 2;
+      showState--;
+      if(showState == -1) showState = 2;
       RTC.read(currentTime);
       showWatchFace(true);
       }
 
     if (wakeupBit & DOWN_BTN_MASK) {
-      mode++;
-      if(mode == 3) mode = 0;
+      showState++;
+      if(showState == 3) showState = 0;
       RTC.read(currentTime);
       showWatchFace(true);
       }
